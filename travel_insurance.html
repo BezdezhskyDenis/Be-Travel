@@ -91,7 +91,7 @@
       class="row justify-content-center collapse multi-collapse show"
       id="Welcom"
     >
-      <div class="col-8">
+      <div class="col-6">
         <ul class="my_card">
           <li class="">
             <div class="">
@@ -154,7 +154,7 @@
       class="row justify-content-center collapse multi-collapse show"
       id="first_form"
     >
-      <div class="col-8">
+      <div class="col-6">
         <ul class="my_card">
           <li class="">
             <div class="text-center">
@@ -188,6 +188,21 @@
                   oninput="onChange('last_name')"
                 />
                 <label for="last_name">Last Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <select
+                  class="form-select"
+                  aria-label="Gender"
+                  id="gender"
+                  name="gender"
+                  oninput="onChange('gender')"
+                >
+                  <option selected>Select You're Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+                <label for="gender">Gender</label>
               </div>
               <div class="form-floating mb-3">
                 <input
@@ -235,7 +250,7 @@
         class="row justify-content-center collapse multi-collapse multi-collapse-second"
         id="travel_details"
       >
-        <div class="col-8">
+        <div class="col-6">
           <div class="d-grid gap-2 col-4 mx-auto">
             <button
               class="btn btn-secondary"
@@ -283,6 +298,19 @@
                     <label for="last_name_written">Last Name</label>
                   </div>
                 </div>
+                <div class="col">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control text-center"
+                      id="gender_written"
+                      name="gender_written"
+                      placeholder="Gender"
+                      disabled
+                    />
+                    <label for="gender_written">Gender</label>
+                  </div>
+                </div>
                 <div class="form-floating mb-3">
                   <input
                     type="text"
@@ -313,8 +341,8 @@
               <br />
               <div class="form-floating mb-3">
                 <select
-                  class="form-select form-select-lg mb-3"
-                  aria-label=".form-select-lg example"
+                  class="form-select mb-3"
+                  aria-label="country departing"
                   name="country_departing"
                   id="country_departing"
                 >
@@ -589,8 +617,8 @@
               </div>
               <div class="form-floating mb-3">
                 <select
-                  class="form-select form-select-lg mb-3"
-                  aria-label=".form-select-lg example"
+                  class="form-select mb-3"
+                  aria-label="destination country"
                   name="destination_country"
                   id="destination_country"
                 >
@@ -905,8 +933,8 @@
               </div>
               <div class="form-floating mb-3">
                 <select
-                  class="form-select form-select-lg mb-3"
-                  aria-label=".form-select-lg example"
+                  class="form-select mb-3"
+                  aria-label="nationality"
                   name="nationality"
                   id="nationality"
                 >
@@ -1242,8 +1270,8 @@
               <div class="row g-2">
                 <div class="col mb-3 form-floating">
                   <select
-                    class="form-select form-select-lg mb-3"
-                    aria-label=".form-select-lg example"
+                    class="form-select mb-3"
+                    aria-label="address country"
                     name="address_country"
                     id="address_country"
                   >
@@ -1557,7 +1585,7 @@
         class="row justify-content-center collapse multi-collapse-second"
         id="Medical_details"
       >
-        <div class="col-8">
+        <div class="col-6">
           <div class="d-grid gap-2 col-4 mx-auto">
             <button
               class="btn btn-secondary"
@@ -1581,169 +1609,936 @@
                 <div class="col">
                   <div class="form-floating mb-3">
                     <input
-                      type="text"
-                      class="form-control text-center"
-                      id="first_name_written"
-                      name="first_name_written"
-                      placeholder="First Name"
-                      disabled
+                      type="date"
+                      class="form-control"
+                      id="date_of_birth"
+                      name="date_of_birth"
+                      placeholder="Date of Birth"
                     />
-                    <label for="first_name_written">First Name</label>
+                    <label for="first_name_written">Date of Birth</label>
                   </div>
                 </div>
                 <div class="col">
                   <div class="form-floating mb-3">
                     <input
-                      type="text"
+                      type="number"
                       class="form-control text-center"
-                      id="last_name_written"
-                      name="last_name_written"
-                      placeholder="Last Name"
-                      disabled
+                      id="age"
+                      name="age"
+                      placeholder="Age"
                     />
-                    <label for="last_name_written">Last Name</label>
+                    <label for="age">Age</label>
                   </div>
                 </div>
-                <div class="form-floating mb-3">
-                  <input
-                    type="text"
-                    class="form-control text-center"
-                    id="phone_number_written"
-                    name="phone_number_written"
-                    placeholder="Phone Number"
-                    disabled
-                  />
-                  <label for="phone_number_written">Phone Number</label>
+                <hr />
+                <h3>Medical History</h3>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="sad_depressed_mood"
+                        >Sad/depressed mood</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="sad_depressed_mood"
+                        name="sad_depressed_mood"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="loss_of_interest_pleasure"
+                        >Loss of interest/pleasure</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="loss_of_interest_pleasure"
+                        name="loss_of_interest_pleasure"
+                      />
+                    </div>
+                  </div>
                 </div>
-                <div class="form-floating mb-3">
-                  <input
-                    type="text"
-                    class="form-control text-center"
-                    id="email_written"
-                    name="email_written"
-                    placeholder="Email"
-                    disabled
-                  />
-                  <label for="email_written">Email</label>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="feeling_worthless_guilt"
+                        >Feeling worthless/guilt</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="feeling_worthless_guilt"
+                        name="feeling_worthless_guilt"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="withdrawn_social_isolation"
+                        >Withdrawn/Social Isolation</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="withdrawn_social_isolation"
+                        name="withdrawn_social_isolation"
+                      />
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <hr />
-              <div class="text-center">
-                <h3>Travel Details</h3>
-              </div>
-              <br />
-              <div class="row g-2">
-                <div class="col mb-3 form-floating">
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="departure_date"
-                    name="departure_date"
-                    placeholder="Departure Date"
-                    min=""
-                    onchange="ReturnMinDate()"
-                  />
-                  <label for="email">Departure Date</label>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="weight_gain_loss"
+                        >Weight gain/loss</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="weight_gain_loss"
+                        name="weight_gain_loss"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="appetite_increase_decrease"
+                        >Appetite increase/decrease</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="appetite_increase_decrease"
+                        name="appetite_increase_decrease"
+                      />
+                    </div>
+                  </div>
                 </div>
-                <div class="col mb-3 form-floating">
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="return_date"
-                    name="return_date"
-                    placeholder="Return Date"
-                    min=""
-                  />
-                  <label for="email">Return Date</label>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="sleep_disturbance"
+                        >Sleep disturbance</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="sleep_disturbance"
+                        name="sleep_disturbance"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="crying_spells"
+                        >Crying spells</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="crying_spells"
+                        name="crying_spells"
+                      />
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <hr />
-              <div class="text-center">
-                <h3>Passenger Details</h3>
-              </div>
-              <br />
-              <div class="form-floating mb-3">
-                <input
-                  type="text"
-                  class="form-control text-center"
-                  id="passport_number"
-                  name="passport_number"
-                  placeholder="Passport Number"
-                />
-                <label for="passport_number">Passport Number</label>
-              </div>
-              <div class="row g-2">
-                <div class="col mb-3 form-floating">
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="issue_date"
-                    name="issue_date"
-                    placeholder="Issue Date"
-                  />
-                  <label for="issue_date">Issue Date</label>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="difficulty_concentrating"
+                        >Difficulty concentrating</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="difficulty_concentrating"
+                        name="difficulty_concentrating"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="grandiosity"
+                        >Grandiosity</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="grandiosity"
+                        name="grandiosity"
+                      />
+                    </div>
+                  </div>
                 </div>
-                <div class="col mb-3 form-floating">
-                  <input
-                    type="date"
-                    class="form-control"
-                    id="expiry_date"
-                    name="expiry_date"
-                    placeholder="Expiry Date"
-                  />
-                  <label for="expiry_date">Expiry Date</label>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="talkative"
+                        >Talkative</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="talkative"
+                        name="talkative"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="flight_of_ideas"
+                        >Flight of ideas</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="flight_of_ideas"
+                        name="flight_of_ideas"
+                      />
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <hr />
-              <div class="text-center">
-                <h3>Address</h3>
-              </div>
-              <br />
-              <div class="form-floating mb-3">
-                <input
-                  type="text"
-                  class="form-control text-center"
-                  id="street_address"
-                  name="street_address"
-                  placeholder="Street Address"
-                />
-                <label for="street_address">Street</label>
-              </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="distractibility"
+                        >Distractibility</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="distractibility"
+                        name="distractibility"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="unrestrained_buying_sprees"
+                        >Unrestrained buying sprees</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="unrestrained_buying_sprees"
+                        name="unrestrained_buying_sprees"
+                      />
+                    </div>
+                  </div>
+                </div>
 
-              <div class="row g-2">
-                <div class="col mb-3 form-floating">
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="sexual_indiscretions"
+                        >Sexual indiscretions</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="sexual_indiscretions"
+                        name="sexual_indiscretions"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="excessive_pleasure_activities"
+                        >Excessive pleasure activities</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="excessive_pleasure_activities"
+                        name="excessive_pleasure_activities"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="muscle_tension"
+                        >Muscle tension</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="muscle_tension"
+                        name="muscle_tension"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="heart_palpitations"
+                        >Heart palpitations</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="heart_palpitations"
+                        name="heart_palpitations"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="sweating_not_due_to_heat"
+                        >Sweating not due to heat</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="sweating_not_due_to_heat"
+                        name="sweating_not_due_to_heat"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="trembling_shaking"
+                        >Trembling/shaking</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="trembling_shaking"
+                        name="trembling_shaking"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="shortness_of_breath"
+                        >Shortness of breath</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="shortness_of_breath"
+                        name="shortness_of_breath"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="feeling_of_choking"
+                        >Feeling of choking</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="feeling_of_choking"
+                        name="feeling_of_choking"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="chest_pain_discomfort"
+                        >Chest pain/discomfort</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="chest_pain_discomfort"
+                        name="chest_pain_discomfort"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="feeling_dizzy_lightheaded"
+                        >Feeling dizzy/lightheaded</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="feeling_dizzy_lightheaded"
+                        name="feeling_dizzy_lightheaded"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="compulsions"
+                        >Compulsions</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="compulsions"
+                        name="compulsions"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="fear_of_losing_control"
+                        >Fear of losing control</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="fear_of_losing_control"
+                        name="fear_of_losing_control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="recurrent_persistent_thoughts"
+                        >Recurrent/persistent thoughts</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="recurrent_persistent_thoughts"
+                        name="recurrent_persistent_thoughts"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="recurrent_intrusive_memories"
+                        >Recurrent/intrusive memories</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="recurrent_intrusive_memories"
+                        name="recurrent_intrusive_memories"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="laxative_diuretic_abuse"
+                        >Laxative/diuretic abuse</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="laxative_diuretic_abuse"
+                        name="laxative_diuretic_abuse"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="trouble_following_directions"
+                        >Trouble following directions</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="trouble_following_directions"
+                        name="trouble_following_directions"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="touchy_easily_annoyed"
+                        >Touchy/easily annoyed</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="touchy_easily_annoyed"
+                        name="touchy_easily_annoyed"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="thoughts_of_suicide"
+                        >Thoughts of Suicide</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="thoughts_of_suicide"
+                        name="thoughts_of_suicide"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="homicidal_ideation"
+                        >Homicidal Ideation</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="homicidal_ideation"
+                        name="homicidal_ideation"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="poor_impulse_control"
+                        >Poor impulse control</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="poor_impulse_control"
+                        name="poor_impulse_control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="relationship_difficulties"
+                        >Relationship difficulties</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="relationship_difficulties"
+                        name="relationship_difficulties"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label
+                        class="form-check-label"
+                        for="deliberate_property_destruction"
+                        >Deliberate property/destruction</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="deliberate_property_destruction"
+                        name="deliberate_property_destruction"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="other">Other</label>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="other"
+                        name="other"
+                        onclick="ShowHidden('other_medical_history_form', 'other')"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="form-floating mb-3"
+                  id="other_medical_history_form"
+                  style="display: none"
+                >
                   <input
                     type="text"
-                    class="form-control text-center"
-                    id="city"
-                    name="city"
-                    placeholder="City"
+                    class="form-control"
+                    id="other_medical_history"
+                    name="other_medical_history"
+                    placeholder="Other Medical History"
                   />
-                  <label for="city">City</label>
+                  <label for="other_medical_history"
+                    >Other Medical History</label
+                  >
                 </div>
-                <div class="col mb-3 form-floating">
-                  <input
-                    type="text"
-                    class="form-control text-center"
-                    id="state"
-                    name="state"
-                    placeholder="State"
-                  />
-                  <label for="state">State</label>
+                <hr />
+                <h3>Smoking</h3>
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check form-switch">
+                      <label class="form-check-label" for="smoking"
+                        >Are you Smoking</label
+                      >
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="smoking"
+                        name="smoking"
+                        onclick="ShowHidden('often_smoke_form', 'smoking')"
+                      />
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div class="row g-2">
-                <div class="col mb-3 form-floating">
+                <div
+                  class="form-floating mb-3"
+                  id="often_smoke_form"
+                  style="display: none"
+                >
                   <input
                     type="number"
-                    class="form-control text-center"
-                    id="zip_code"
-                    name="zip_code"
-                    placeholder="Zip Code"
+                    class="form-control"
+                    id="often_smoke"
+                    name="often_smoke"
+                    placeholder="How often you smoke"
                   />
-                  <label for="zip_code">Zip Code</label>
+                  <label for="often_smoke">How often you smoke</label>
+                </div>
+                <hr />
+                <h3>Allergies</h3>
+                <div class="form-floating mb-3">
+                  <textarea
+                    class="form-control"
+                    id="list_out_allergies"
+                    name="list_out_allergies"
+                    placeholder="List out allergies"
+                    style="height: 100px"
+                  >
+                  </textarea>
+                  <label for="list_out_allergies">List out allergies</label>
+                </div>
+                <hr />
+                <h3>Hospitalized</h3>
+                <div class="form-check form-switch">
+                  <label class="form-check-label" for="hospitalized"
+                    >Have you been hospitalized for past 6 month?</label
+                  >
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    role="switch"
+                    id="hospitalized"
+                    name="hospitalized"
+                    onclick="ShowHidden('hospitalized_yes', 'hospitalized')"
+                  />
+                </div>
+                <div class="row" id="hospitalized_yes" style="display: none">
+                  <div class="col">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control text-center"
+                        id="hospitalized_reason"
+                        name="hospitalized_reason"
+                        placeholder="What reason?"
+                      />
+                      <label for="hospitalized_reason">What reason?</label>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="number"
+                        class="form-control text-center"
+                        id="Duration"
+                        name="Duration"
+                        placeholder="Duration"
+                      />
+                      <label for="Duration">Duration</label>
+                    </div>
+                  </div>
                 </div>
               </div>
+              <hr />
+              <div class="text-center">
+                <h3>Insurance Details</h3>
+              </div>
+              <br />
+              <h4>Basic covers and important extensions</h4>
+              <div class="row">
+                <div class="col">
+                  <div class="form-check form-switch">
+                    <label class="form-check-label" for="Covid_19"
+                      >Covid-19</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="Covid_19"
+                      name="Covid_19"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-check form-switch">
+                    <label class="form-check-label" for="baggage_cover"
+                      >Baggage cover</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="baggage_cover"
+                      name="baggage_cover"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-check form-switch">
+                    <label class="form-check-label" for="Covid_19"
+                      >Covid-19</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="Covid_19"
+                      name="Covid_19"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-check form-switch">
+                    <label class="form-check-label" for="baggage_cover"
+                      >Baggage cover</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="baggage_cover"
+                      name="baggage_cover"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-check form-switch">
+                    <label class="form-check-label" for="cancellation"
+                      >Coverage for cancellation and shortening of travel for
+                      medical reasons</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="cancellation"
+                      name="cancellation"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-check form-switch">
+                    <label class="form-check-label" for="winter_sports"
+                      >Winter sports</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="winter_sports"
+                      name="winter_sports"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-check form-switch">
+                    <label class="form-check-label" for="extreme_sports"
+                      >Extreme sports</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="extreme_sports"
+                      name="extreme_sports"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-check form-switch">
+                    <label class="form-check-label" for="ticket_expenses"
+                      >Reimbursement of entertainment ticket expenses</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="ticket_expenses"
+                      name="ticket_expenses"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-check form-switch">
+                    <label class="form-check-label" for="theft_of_laptop_tablet"
+                      >Theft of laptop/tablet</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="theft_of_laptop_tablet"
+                      name="theft_of_laptop_tablet"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-check form-switch">
+                    <label class="form-check-label" for="cell_phone_theft_cover"
+                      >Cell phone theft cover</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="cell_phone_theft_cover"
+                      name="cell_phone_theft_cover"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-check form-switch">
+                    <label class="form-check-label" for="camera_theft"
+                      >Camera theft</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="camera_theft"
+                      name="camera_theft"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="form-check form-switch">
+                    <label
+                      class="form-check-label"
+                      for="cancellation_operational_activity"
+                      >Cancellation of a trip due to operational activity</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="cancellation_operational_activity"
+                      name="cancellation_operational_activity"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-check form-switch">
+                    <label class="form-check-label" for="valuable_item"
+                      >Valuable item</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="valuable_item"
+                      name="valuable_item"
+                    />
+                  </div>
+                </div>
+              </div>
+              <hr />
+
               <div class="d-grid gap-2">
                 <button
                   class="btn btn-primary"
@@ -1801,6 +2596,15 @@
     function onChange(id) {
       const inp_change = document.getElementById(id);
       document.getElementById(id + "_written").value = inp_change.value;
+    }
+
+    function ShowHidden(id, get) {
+      const hiddenYN = document.getElementById(get);
+      if (hiddenYN.checked == true) {
+        document.getElementById(id).style.display = "block";
+      } else {
+        document.getElementById(id).style.display = "none";
+      }
     }
   </script>
 </html>
