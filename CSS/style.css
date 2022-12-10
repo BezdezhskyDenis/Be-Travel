@@ -10,6 +10,9 @@ ul, li {
 .car_insurance {
   background-color: whitesmoke;
 }
+.tax_refund {
+  background-color: rgba(202, 241, 248, 0.756);
+}
 .my_card {
     border: 1px, solid;
     border-radius: 50px;
