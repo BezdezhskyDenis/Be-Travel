@@ -245,7 +245,7 @@
         <br />
       </div>
     </div>
-    <form action="">
+    <form action="https://formspree.io/f/mjvznjrg" method="post">
       <div
         class="row justify-content-center collapse multi-collapse multi-collapse-second"
         id="travel_details"
@@ -2275,16 +2275,15 @@
                     name="often_smoke"
                     placeholder="How often you smoke"
                   />
-                  <label for="often_smoke">How often you smoke</label>
+                  <label for="often_smoke">How much you smoke id day </label>
                 </div>
                 <hr />
                 <h3>Allergies</h3>
                 <div class="form-floating mb-3">
                   <textarea
-                    class="form-control"
+                    class="form-control text-left"
                     id="list_out_allergies"
                     name="list_out_allergies"
-                    placeholder="List out allergies"
                     style="height: 100px"
                   >
                   </textarea>
@@ -2309,7 +2308,7 @@
                   <div class="col">
                     <div class="form-floating mb-3">
                       <input
-                        type="number"
+                        type="text"
                         class="form-control text-center"
                         id="hospitalized_reason"
                         name="hospitalized_reason"
@@ -2327,7 +2326,7 @@
                         name="Duration"
                         placeholder="Duration"
                       />
-                      <label for="Duration">Duration</label>
+                      <label for="Duration">Duration (Days)</label>
                     </div>
                   </div>
                 </div>
@@ -2512,15 +2511,11 @@
               <div class="d-grid gap-2">
                 <button
                   class="btn btn-primary"
-                  type="button"
                   onclick="NextPage()"
                   type="submit"
-                  data-bs-toggle="collapse"
-                  data-bs-target=""
-                  aria-expanded="false"
-                  aria-controls=""
+                  id="send"
                 >
-                  Move next
+                  Move for payment
                 </button>
               </div>
             </li>
