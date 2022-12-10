@@ -4,8 +4,11 @@ ul, li {
     padding: 0;
     line-height: 2;
   }
-body {
+.travel_insurance {
     background-color: aliceblue;
+}
+.car_insurance {
+  background-color: whitesmoke;
 }
 .my_card {
     border: 1px, solid;
@@ -25,3 +28,9 @@ select:required:invalid {
     background-color: rgb(253, 208, 208);
     border-color: #c00000;
   }
+  .my_card_car {
+    border: 1px, solid;
+    border-radius: 50px;
+    background-color: white;
+    padding: 20px
+}
