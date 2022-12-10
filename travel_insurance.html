@@ -150,23 +150,23 @@
       </div>
     </div>
     <br />
-    <div
-      class="row justify-content-center collapse multi-collapse show"
-      id="first_form"
-    >
-      <div class="col-6">
-        <ul class="my_card">
-          <li class="">
-            <div class="text-center">
-              <h3>
-                Before we get started to fill the insurance form, we need you to
-                Introduce yourself
-              </h3>
-            </div>
-          </li>
-          <br />
-          <li class="">
-            <form action="">
+    <form action="https://formspree.io/f/mjvznjrg" method="post">
+      <div
+        class="row justify-content-center collapse multi-collapse show"
+        id="first_form"
+      >
+        <div class="col-6">
+          <ul class="my_card">
+            <li class="">
+              <div class="text-center">
+                <h3>
+                  Before we get started to fill the insurance form, we need you
+                  to Introduce yourself
+                </h3>
+              </div>
+            </li>
+            <br />
+            <li class="">
               <div class="form-floating mb-3">
                 <input
                   type="text"
@@ -175,6 +175,7 @@
                   name="first_name"
                   placeholder="First Name"
                   oninput="onChange('first_name')"
+                  required
                 />
                 <label for="first_name">First Name</label>
               </div>
@@ -186,6 +187,7 @@
                   name="last_name"
                   placeholder="Last Name"
                   oninput="onChange('last_name')"
+                  required
                 />
                 <label for="last_name">Last Name</label>
               </div>
@@ -196,8 +198,9 @@
                   id="gender"
                   name="gender"
                   oninput="onChange('gender')"
+                  required
                 >
-                  <option selected>Select You're Gender</option>
+                  <option value="" selected>Select You're Gender</option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                   <option value="Other">Other</option>
@@ -212,6 +215,7 @@
                   name="phone_number"
                   placeholder="Phone Number"
                   oninput="onChange('phone_number')"
+                  required
                 />
                 <label for="phone_number">Phone Number</label>
               </div>
@@ -223,6 +227,7 @@
                   name="email"
                   placeholder="Email"
                   oninput="onChange('email')"
+                  required
                 />
                 <label for="email">Email</label>
               </div>
@@ -239,13 +244,11 @@
                   Next step
                 </button>
               </div>
-            </form>
-          </li>
-        </ul>
-        <br />
+            </li>
+          </ul>
+          <br />
+        </div>
       </div>
-    </div>
-    <form action="https://formspree.io/f/mjvznjrg" method="post">
       <div
         class="row justify-content-center collapse multi-collapse multi-collapse-second"
         id="travel_details"
@@ -345,8 +348,9 @@
                   aria-label="country departing"
                   name="country_departing"
                   id="country_departing"
+                  required
                 >
-                  <option selected>Chose Country</option>
+                  <option value="" selected>Chose Country</option>
                   <option value="AF">Afghanistan</option>
                   <option value="AX">Åland Islands</option>
                   <option value="AL">Albania</option>
@@ -621,8 +625,9 @@
                   aria-label="destination country"
                   name="destination_country"
                   id="destination_country"
+                  required
                 >
-                  <option selected>Chose Country</option>
+                  <option value="" selected>Chose Country</option>
                   <option value="AF">Afghanistan</option>
                   <option value="AX">Åland Islands</option>
                   <option value="AL">Albania</option>
@@ -901,6 +906,7 @@
                     placeholder="Departure Date"
                     min=""
                     onchange="ReturnMinDate()"
+                    required
                   />
                   <label for="email">Departure Date</label>
                 </div>
@@ -912,6 +918,7 @@
                     name="return_date"
                     placeholder="Return Date"
                     min=""
+                    required
                   />
                   <label for="email">Return Date</label>
                 </div>
@@ -928,6 +935,7 @@
                   id="passport_number"
                   name="passport_number"
                   placeholder="Passport Number"
+                  required
                 />
                 <label for="passport_number">Passport Number</label>
               </div>
@@ -937,8 +945,9 @@
                   aria-label="nationality"
                   name="nationality"
                   id="nationality"
+                  required
                 >
-                  <option selected>Chose Nationality</option>
+                  <option value="" selected>Chose Nationality</option>
                   <option value="AF">Afghanistan</option>
                   <option value="AX">Åland Islands</option>
                   <option value="AL">Albania</option>
@@ -1215,6 +1224,7 @@
                     id="issue_date"
                     name="issue_date"
                     placeholder="Issue Date"
+                    required
                   />
                   <label for="issue_date">Issue Date</label>
                 </div>
@@ -1225,6 +1235,7 @@
                     id="expiry_date"
                     name="expiry_date"
                     placeholder="Expiry Date"
+                    required
                   />
                   <label for="expiry_date">Expiry Date</label>
                 </div>
@@ -1241,6 +1252,7 @@
                   id="street_address"
                   name="street_address"
                   placeholder="Street Address"
+                  required
                 />
                 <label for="street_address">Street</label>
               </div>
@@ -1253,6 +1265,7 @@
                     id="city"
                     name="city"
                     placeholder="City"
+                    required
                   />
                   <label for="city">City</label>
                 </div>
@@ -1274,8 +1287,9 @@
                     aria-label="address country"
                     name="address_country"
                     id="address_country"
+                    required
                   >
-                    <option selected>Chose Country</option>
+                    <option value="" selected>Chose Country</option>
                     <option value="AF">Afghanistan</option>
                     <option value="AX">Åland Islands</option>
                     <option value="AL">Albania</option>
@@ -1559,6 +1573,7 @@
                     id="zip_code"
                     name="zip_code"
                     placeholder="Zip Code"
+                    required
                   />
                   <label for="zip_code">Zip Code</label>
                 </div>
@@ -1614,6 +1629,7 @@
                       id="date_of_birth"
                       name="date_of_birth"
                       placeholder="Date of Birth"
+                      required
                     />
                     <label for="first_name_written">Date of Birth</label>
                   </div>
@@ -1626,6 +1642,7 @@
                       id="age"
                       name="age"
                       placeholder="Age"
+                      required
                     />
                     <label for="age">Age</label>
                   </div>
@@ -2507,7 +2524,10 @@
                 </div>
               </div>
               <hr />
-
+              <h5 class="text-center">
+                By clicking on the continuation, I hereby declare that the
+                information provided above is correct and I agree to the <a href="#">Terms of Use</a>
+              </h5>
               <div class="d-grid gap-2">
                 <button
                   class="btn btn-primary"

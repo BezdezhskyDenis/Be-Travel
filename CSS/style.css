@@ -16,3 +16,12 @@ body {
 textarea{
     resize: none;
 }
+
+input:required:invalid {
+    background-color: rgb(253, 208, 208);
+    border-color: #c00000;
+  }
+select:required:invalid {
+    background-color: rgb(253, 208, 208);
+    border-color: #c00000;
+  }
