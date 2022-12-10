@@ -82,5 +82,40 @@
         </div>
       </div>
     </nav>
+    <div class="text-center">
+      <h1>Site is under construction</h1>
+      <h3>You can still use our services</h3>
+      <br>
+      <hr>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-primary" type="button" onclick="NextPage('travel_insurance')">
+              Travel Insurance
+            </button>
+          </div>
+          <div class="col">
+            <button class="btn btn-primary" type="button" onclick="NextPage('car_insurance')">
+              Car Insurance
+            </button>
+          </div>
+          <div class="col">
+            <button
+              class="btn btn-primary"
+              type="button"
+              onclick="NextPage('tax_refund')"
+              disabled
+            >
+              Tax Refund
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+  <script>
+    function NextPage(id){
+      window.open("./"+id+".html","_self")
+    }
+  </script>
 </html>
