@@ -18,7 +18,7 @@
     ></script>
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
-  <body>
+  <body onload="Today()">
     <nav class="navbar navbar-expand-lg bg-light sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="./index.html">Be Travel</a>
@@ -114,7 +114,8 @@
                 full deposit to no refund at all. Another important fact to keep
                 in mind is that that most health insurance policies will not
                 cover you when you are out of the country. Your Travel Insurance
-                will protect you in the following areas: Trip Cancellation
+                will protect you in the following areas:<br />
+                Trip Cancellation
                 <br />
                 Trip Delay <br />
                 Trip Interruption <br />
@@ -156,7 +157,7 @@
       <div class="col-8">
         <ul class="my_card">
           <li class="">
-            <div class="">
+            <div class="text-center">
               <h3>
                 Before we get started to fill the insurance form, we need you to
                 Introduce yourself
@@ -228,60 +229,127 @@
     </div>
     <div class="row justify-content-center collapse multi-collapse" id="">
       <div class="col-8">
-        <div class="d-grid gap-2">
-            <button
-              class="btn btn-primary"
-              type="button"
-              onclick="NextPage()"
-              type="submit"
-              data-bs-toggle="collapse"
-              data-bs-target=".multi-collapse"
-              aria-expanded="true"
-              aria-controls="first_form Welcom"
-            >
-              Return
-            </button>
-          </div>
-          <br>
+        <div class="d-grid gap-2 col-4 mx-auto">
+          <button
+            class="btn btn-secondary"
+            type="button"
+            onclick="NextPage()"
+            type="submit"
+            data-bs-toggle="collapse"
+            data-bs-target=".multi-collapse"
+            aria-expanded="true"
+            aria-controls="first_form Welcom"
+          >
+            Return
+          </button>
+        </div>
+        <br />
         <ul class="my_card">
-          <li class="">
-            <h3>
-              Before we get started to fill the insurance form, we need you to
-              Introduce yourself
-            </h3>
+          <li class="text-center">
+            <h3>Applicant's Details</h3>
           </li>
           <br />
           <li class="">
             <form action="">
+              <div class="row g-2">
+                <div class="col">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control text-center"
+                      id="first_name"
+                      name="first_name"
+                      placeholder="First Name"
+                      disabled
+                    />
+                    <label for="first_name">First Name</label>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control text-center"
+                      id="last_name"
+                      name="last_name"
+                      placeholder="Last Name"
+                      disabled
+                    />
+                    <label for="last_name">Last Name</label>
+                  </div>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control text-center"
+                    id="passport_number"
+                    name="passport_number"
+                    placeholder="Passport Number"
+                    disabled
+                  />
+                  <label for="passport_number">Passport Number</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    class="form-control text-center"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    disabled
+                  />
+                  <label for="email">Email</label>
+                </div>
+              </div>
+              <hr />
+              <div class="text-center">
+                <h3>Travel Details</h3>
+              </div>
+              <br />
               <div class="form-floating mb-3">
                 <input
-                  type="text"
+                  type="email"
                   class="form-control"
-                  id="first_name"
-                  name="first_name"
-                  placeholder="First Name"
+                  id="email"
+                  name="email"
+                  placeholder="Email"
                 />
-                <label for="first_name">First Name</label>
+                <label for="email">2</label>
+              </div>
+              <div class="row g-2">
+                <div class="col mb-3 form-floating">
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="departure_date"
+                    name="departure_date"
+                    placeholder="Departure Date"
+                    min=""
+                    onchange="ReturnMinDate()"
+                  />
+                  <label for="email">Departure Date</label>
+                </div>
+                <div class="col mb-3 form-floating">
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="return_date"
+                    name="return_date"
+                    placeholder="Return Date"
+                    min=""
+                  />
+                  <label for="email">Return Date</label>
+                </div>
               </div>
               <div class="form-floating mb-3">
                 <input
-                  type="text"
+                  type="email"
                   class="form-control"
-                  id="last_name"
-                  name="last_name"
-                  placeholder="Last Name"
+                  id="test"
+                  name="email"
+                  placeholder="Email"
                 />
-                <label for="last_name">Last Name</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="passport_number"
-                  name="passport_number"
-                  placeholder="Passport Number"
-                />
-                <label for="passport_number">Passport Number</label>
+                <label for="email">3</label>
               </div>
               <div class="form-floating mb-3">
                 <input
@@ -291,7 +359,7 @@
                   name="email"
                   placeholder="Email"
                 />
-                <label for="email">Email</label>
+                <label for="email">4 </label>
               </div>
               <div class="d-grid gap-2">
                 <button
@@ -315,6 +383,7 @@
     </div>
     <div class="row justify-content-center text-center">
       <div class="col-8">
+        <h3>Now you need to fill the Medical Form</h3>
         <p>
           Copyright 2022 That Creative Couple Pty Ltd (ACN: 635 193 574) | All
           Rights Reserved Privacy Policy | Terms of Use | Affiliates
@@ -327,5 +396,24 @@
     // function NextPage() {
     //   window.open("index.html");
     // }
+    function Today() {
+      var today = new Date();
+      var dd = today.getDate();
+      var mm = today.getMonth() + 1; //January is 0!
+      var yyyy = today.getFullYear();
+      if (dd < 10) {
+        dd = "0" + dd;
+      }
+      if (mm < 10) {
+        mm = "0" + mm;
+      }
+      today = yyyy + "-" + mm + "-" + dd;
+      document.getElementById("departure_date").min = today;
+      document.getElementById("return_date").min = today;
+    }
+    function ReturnMinDate() {
+      var dep_date = document.getElementById("departure_date");
+      document.getElementById("return_date").min = dep_date.value;
+    }
   </script>
 </html>
