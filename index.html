@@ -16,13 +16,16 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script
+      src="https://kit.fontawesome.com/89de2aef53.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-light sticky-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="./index.html">Be Travel</a>
-        <a class="navbar-brand" href="#">Be Travel</a>
         <div class="justify-content-end">
           <button
             class="navbar-toggler"
@@ -50,18 +53,18 @@
                 <ul class="dropdown-menu">
                   <li>
                     <a class="dropdown-item" href="./travel_insurance.html"
-                      >Travel Insurance</a
+                      ><i class="fa-solid fa-compass"></i> Travel Insurance</a
                     >
                   </li>
                   <li>
                     <a class="dropdown-item" href="./car_insurance.html"
-                      >Car Insurance</a
+                      ><i class="fa-solid fa-car"></i> Car Insurance</a
                     >
                   </li>
                   <li><hr class="dropdown-divider" /></li>
                   <li>
                     <a class="dropdown-item" href="./tax_refund.html"
-                      >Tax Refund</a
+                      ><i class="fa-solid fa-sack-dollar"></i> Tax Refund</a
                     >
                   </li>
                 </ul>
@@ -83,6 +86,8 @@
       </div>
     </nav>
     <div class="text-center">
+      <h1>Welcome To Be Travel Agency</h1>
+      <h2>Here you can find awesome Trips around the world and make your'e dream cam true</h2>
       <h1>Site is under construction</h1>
       <img
         src="https://www.bing.com/th?id=OIP.VvQPyZQKvJo81rlJGCUMKAHaIz&w=229&h=272&c=8&rs=1&qlt=90&o=6&dpr=1.9&pid=3.1&rm=2"
@@ -94,32 +99,38 @@
       <hr />
       <div class="container text-center">
         <div class="row">
-          <div class="col">
+          <div class="col-sm-4 col-md-4 col-lg-4">
             <button
-              class="btn btn-info"
+              class="btn btn-outline-dark border-white main-button"
               type="button"
               onclick="NextPage('travel_insurance')"
             >
-              Travel Insurance
+              <i class="fa-solid fa-compass"></i>
             </button>
+            <h3>Travel Insurance</h3>
+            <p>Obtain travel insurance for your'e trip</p>
           </div>
-          <div class="col">
+          <div class="col-sm-4 col-md-4 col-lg-4">
             <button
-              class="btn btn-info"
+              class="btn btn-outline-dark border-white main-button"
               type="button"
               onclick="NextPage('car_insurance')"
             >
-              Car Insurance
+              <i class="fa-solid fa-car"></i>
             </button>
+            <h3>Car Insurance</h3>
+            <p>Purchase insurance for your'e rent car</p>
           </div>
-          <div class="col">
+          <div class="col-sm-4 col-md-4 col-lg-4">
             <button
-              class="btn btn-info"
+              class="btn btn-outline-dark border-white main-button"
               type="button"
               onclick="NextPage('tax_refund')"
             >
-              Tax Refund
+              <i class="fa-solid fa-sack-dollar"></i>
             </button>
+            <h3>VAT Refund</h3>
+            <p>Get your'e mony back by fill the VAT refund form</p>
           </div>
         </div>
       </div>
